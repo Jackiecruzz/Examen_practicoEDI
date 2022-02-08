@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio3</title>
+</head>
+<body>
+<script>
+    /*3.- Cuenta cuantas veces se repite un caracter en especifico (20 ptos).
+Diseña un código en el cual se pueda ingresar una cadena de texto y regrese cuantas
+veces se repite un carácter dado en dicha cadena de texto.
+Ejemplo la cadena dada es “hola como estas” y el carácter dado para saber cuantas veces
+se repite es “o” entonces la consola debería de mostrar: el carácter “o” se repite 3 veces en
+“hola como estas”*/
+    function cuantasVecesAparece(cadena, caracter){
+        var indices = [];
+        for(var i = 0; i < cadena.length; i++) {
+            if (cadena[i].toLowerCase() === caracter) indices.push(i);
+        }
+        return indices.length;
+    }
+    var string = "Hola,mucho gusto,como estAs?";
+    var caracterBuscar = "a";
+    var coincidencias = cuantasVecesAparece(string, caracterBuscar);
+
+ console.log("La letra 'a' aparece "+cuantasVecesAparece(string,caracterBuscar)+" veces")
+
+</script>
+</body>
+</html>
